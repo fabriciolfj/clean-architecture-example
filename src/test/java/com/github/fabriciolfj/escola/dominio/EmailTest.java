@@ -1,4 +1,4 @@
-package com.github.fabriciolfj.escola;
+package com.github.fabriciolfj.escola.dominio;
 
 import com.github.fabriciolfj.escola.dominio.aluno.Email;
 import org.junit.jupiter.api.Test;
