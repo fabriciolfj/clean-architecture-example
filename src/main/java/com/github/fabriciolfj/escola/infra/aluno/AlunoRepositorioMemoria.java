@@ -21,7 +21,7 @@ public class AlunoRepositorioMemoria implements RepositorioDeAlunos {
     public Aluno buscarPorCpf(final CPF cpf) {
         return matriculados
                 .stream()
-                .filter(p -> p.getCpf().equals(cpf))
+                .filter(p -> p.getCpf().equals(cpf.getNumero()))
                 .findFirst()
                 .orElseThrow(() -> new AlunoNaoEncontrado("Aluno não encontrado para o cpf: " + cpf));
     }

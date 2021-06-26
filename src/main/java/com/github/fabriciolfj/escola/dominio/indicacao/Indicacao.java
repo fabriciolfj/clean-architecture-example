@@ -27,4 +27,13 @@ public class Indicacao {
     public LocalDateTime getDataIndicacao() {
         return dataIndicacao;
     }
+
+    @Override
+    public String toString() {
+        return "Indicacao{" +
+                "indicado=" + indicado +
+                ", indicante=" + indicante +
+                ", dataIndicacao=" + dataIndicacao +
+                '}';
+    }
 }
