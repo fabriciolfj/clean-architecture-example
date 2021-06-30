@@ -13,3 +13,6 @@
 
 ### Agregate
 - uma entidade que possi vários value object
+
+### Eventos
+- ações que ocorrem de forma desacoplada, diante a um acontecimento. Exemplo: pedido foi atualizado, eventos: imprimir, enviar por email, transmitir para uma middleware
