@@ -1,5 +1,7 @@
 package com.github.fabriciolfj.escola.dominio.aluno;
 
+import com.github.fabriciolfj.escola.dominio.exceptions.LimiteTelefoneAtingido;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,6 +19,10 @@ public class Aluno {
     }
 
     public void addTelefone(final String ddd, final String numero) {
+        if (this.telefones.size() == 2) {
+            throw new LimiteTelefoneAtingido("Quantidade máxima de telefones atingida");
+        }
+
         this.telefones.add(new Telefone(ddd, numero));
     }
 
@@ -34,6 +40,10 @@ public class Aluno {
 
     public List<Telefone> getTelefones() {
         return telefones;
+    }
+
+    public CPF getCpfCompleto() {
+        return this.cpf;
     }
 
     @Override

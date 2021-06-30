@@ -15,7 +15,7 @@ public class AlunoCaseTest {
     @Test
     public void criarAlunoComSucesso() {
         var dto = new MatricularAlunoDTO("Fabricio", "254.158.960-31", "fabricio@hotmail.com");
-        var caso = new AlunoCase();
+        var caso = new AlunoCase(new AlunoRepositorioMemoria(), new PublisherEvents());
         caso.execute(dto);
 
         assertTrue(repositorioDeAlunos.listaAlunosMatriculados().size() == 1);
